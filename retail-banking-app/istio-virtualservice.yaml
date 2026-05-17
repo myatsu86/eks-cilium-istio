@@ -1,0 +1,15 @@
+apiVersion: networking.istio.io/v1
+kind: VirtualService
+metadata:
+  name: customer-profile-virtual-service
+spec:
+  hosts:
+  - retail-banking.myatsumon.info
+  gateways:
+  - retail-banking-istio-gateway
+  http:
+  - route:
+    - destination:
+        host: customer-profile-svc.retail-banking-team.svc.cluster.local
+        port:
+          number: 8081
