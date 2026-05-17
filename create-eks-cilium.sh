@@ -3,7 +3,7 @@ set -euo pipefail
 
 CLUSTER_NAME=my-eks-cluster
 REGION=ap-southeast-1
-AWS_PROFILE=aws-master-admin  # pc-sandbox-admin
+AWS_PROFILE=aws-master-admin  
 
 # create EKS cluster with eksctl
 echo "Creating EKS cluster with eksctl..."
